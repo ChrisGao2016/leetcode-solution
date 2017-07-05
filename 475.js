@@ -6,7 +6,7 @@
 var findRadius = function(houses, heaters) {
   let cur = 0;
   let next = 0;
-  let start = 0;
+  let start = 0; 
   let radius = 0;
   houses.sort((a,b) => a-b);
   heaters.sort((a,b) => a-b);
