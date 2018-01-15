@@ -6,3 +6,4 @@ _package/
 npm-debug.log
 .DS_Store
 .vscode/
+.eslintrc

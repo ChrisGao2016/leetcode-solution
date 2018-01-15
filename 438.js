@@ -3,7 +3,7 @@
  * @param {string} p
  * @return {number[]}
  */
-/*var findAnagrams = function(s, p) {
+/* var findAnagrams = function(s, p) {
   let pMap = {};
   let count = 0;
   p.split('').forEach(char => {
@@ -31,7 +31,7 @@
   }
   return result;
 }; */
-/*var findAnagrams = function (s, p) {
+/* var findAnagrams = function (s, p) {
   let pMap = {};
   for (let i = 0; i < p.length; ++i) {
     if (pMap[p[i]]) {
@@ -60,10 +60,10 @@
     }
   }
   return result;
-};*/
-var findAnagrams = function(s, p) {
+}; */
+var findAnagrams = function (s, p) {
   let pMap = {};
-  for(let i = 0; i < p.length; ++i) {
+  for (let i = 0; i < p.length; ++i) {
     if (pMap[p[i]]) {
       pMap[p[i]]++;
     } else {
@@ -77,17 +77,17 @@ var findAnagrams = function(s, p) {
       --count;
     }
   }
-  for(let i = 0; i < s.length - p.length + 1; ++i) {
+  for (let i = 0; i < s.length - p.length + 1; ++i) {
     if (count === 0) {
       result.push(i);
     }
-    if (pMap[s[i]] !== undefined && pMap[s[i]]++ >= 0 ) {
+    if (pMap[s[i]] !== undefined && pMap[s[i]]++ >= 0) {
       ++count;
     }
-    if (pMap[s[i+p.length]] !== undefined && pMap[s[i+p.length]]-- > 0) {
+    if (pMap[s[i + p.length]] !== undefined && pMap[s[i + p.length]]-- > 0) {
       --count;
     }
   }
   return result;
-}
-console.log(findAnagrams("abacbabc", 'abc'));
+};
+console.log(findAnagrams('abacbabc', 'abc'));
