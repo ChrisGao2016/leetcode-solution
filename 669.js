@@ -11,7 +11,7 @@
  * @param {number} R
  * @return {TreeNode}
  */
-var trimBST = function(root, L, R) {
+var trimBST = function (root, L, R) {
   if (!root) {
     return null;
   }
